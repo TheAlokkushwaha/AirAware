@@ -69,7 +69,15 @@ Run the following script to insert sample data into MongoDB:
 node importData.js
 ```
 
-### 6. Frontend Setup
+### 6. Run the Backend Server
+
+    Start the backend server with:
+
+    ```sh
+    node server.js
+    ```
+
+### 7. Frontend Setup
 
 1. Change directory to the frontend:
 
@@ -81,14 +89,6 @@ node importData.js
 
     ```sh
     npm install
-    ```
-
-### 7. Run the Backend Server
-
-    Start the backend server with:
-
-    ```sh
-    node server.js
     ```
 
 ### 8. Start the React Development Server
