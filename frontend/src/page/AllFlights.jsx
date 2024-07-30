@@ -9,7 +9,7 @@ const statusColors = {
 
 const AllFlights = () => {
   const [flightData, setFlightData] = useState([]);
-  axios.default.withCredentials = true
+  axios.defaults.withCredentials = true
   useEffect(() => {
     axios.get(`https://air-aware-r48m82gnl-thealokkushwahas-projects.vercel.app/api/flights/`)
       .then(response => {
