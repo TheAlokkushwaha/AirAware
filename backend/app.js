@@ -10,10 +10,9 @@ const port = process.env.PORT || 5000;
 const app = express();
 
 app.use(cors({
-  origin: 'https://air-aware-mel5-9d5cxttod-thealokkushwahas-projects.vercel.app', // Update this to match your React app URL exactly
+  origin: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type'],
-  credentials: true, // Allow credentials
+  credentials: true,
 }));
 
 const mongoURL = process.env.MONGODB_URI;
