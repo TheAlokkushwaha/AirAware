@@ -71,11 +71,9 @@ node importData.js
 
 ### 6. Run the Backend Server
 
-    Start the backend server with:
-
-    ```sh
-    node server.js
-    ```
+ ```sh
+ node server.js
+ ```
 
 ### 7. Frontend Setup
 
