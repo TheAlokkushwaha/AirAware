@@ -13,7 +13,7 @@ const port = process.env.PORT || 5000;
 const app = express();
 // app.use(cors());
 app.use(cors({
-  origin: 'https://air-aware-mel5-66jxf4xzj-thealokkushwahas-projects.vercel.app/',
+  origin: 'https://air-aware-mel5-66jxf4xzj-thealokkushwahas-projects.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }));
