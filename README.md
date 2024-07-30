@@ -48,9 +48,7 @@ cd AirAware
 
 Ensure MongoDB is running on the default port (27017). You can start MongoDB with:
 
-```sh
-mongod
-```
+- Open MongoDBCompaas in your system.
 
 ### 5. Import Test Data
 
