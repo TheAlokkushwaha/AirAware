@@ -11,7 +11,12 @@ const port = process.env.PORT || 5000;
 
 
 const app = express();
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: 'https://air-aware-mel5-66jxf4xzj-thealokkushwahas-projects.vercel.app/',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type'],
+}));
 // const mongoURL = 'mongodb://localhost:27017/flight_status';
 const mongoURL = process.env.MONGODB_URI; // Use the environment variable
 
