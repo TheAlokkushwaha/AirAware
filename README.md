@@ -72,7 +72,7 @@ node importData.js
 ### 6. Run the Backend Server
 
  ```sh
- node server.js
+ nodemon server.js
  ```
 
 ### 7. Frontend Setup
