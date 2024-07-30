@@ -1,4 +1,5 @@
 const Flight = require('../models/Flight.js');
+const Notification = require('../models/Notification.js'); 
 const sendMail = require('../notification/mailer.js'); // Adjust the path as needed
 const admin = require('../config/firebase'); // Firebase admin SDK
 
@@ -81,7 +82,7 @@ exports.updateFlight = async (req, res) => {
     // Determine if any relevant fields have changed
     let notify = false;
     let emailSubject = 'Flight Information Update';
-    let emailBody = `Your flight ${flight.flight_id} has been updated with the following changes:\n\n`;
+    let emailBody = `Your flight ${flight.flight_id} has been updated with the following changes:\n\n`;;
 
     if (oldStatus !== flight.status) {
       notify = true;
@@ -99,18 +100,28 @@ exports.updateFlight = async (req, res) => {
     }
 
     if (notify) {
-      // Send notification email
-      await sendMail('alokkushwaha1005@gmail.com', emailSubject, emailBody);
+      // Fetch email from Notification model
+      const notification = await Notification.findOne({ flight_id: flight.flight_id });
+      console.log(notification)
+      if (notification && notification.recipient) {
+        const userEmail = notification.recipient;
+        
+        // Send notification email
+        await sendMail(userEmail, emailSubject, emailBody);
 
-      // Firebase notification
-      const registrationToken = 'user-firebase-registration-token'; // Fetch the user's registration token from the database
-      const payload = {
-        notification: {
-          title: 'Flight Information Update',
-          body: `Flight ${flight.flight_id} has been updated. Check your email for details.`,
-        },
-      };
-      await admin.messaging().sendToDevice(registrationToken, payload);
+        // Firebase notification
+        const registrationToken = 'user-firebase-registration-token' // Assuming registration_token is stored in the notification model
+        const payload = {
+          notification: {
+            title: 'Flight Information Update',
+            body: `Flight ${flight.flight_id} has been updated. Check your email for details.`,
+          },
+        };
+        await admin.messaging().sendToDevice(registrationToken, payload);
+      } else {
+        console.log(`No notification settings found for flight ID ${flight.flight_id}`);
+      }
+      
     }
 
     res.json(flight);
@@ -118,4 +129,3 @@ exports.updateFlight = async (req, res) => {
     res.status(400).json({ message: err.message });
   }
 };
-
