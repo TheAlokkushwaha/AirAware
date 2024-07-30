@@ -1,7 +1,3 @@
-Here's a formatted README file for your project:
-
----
-
 # Flight Status and Notifications System
 
 ## Overview
