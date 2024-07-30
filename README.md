@@ -35,7 +35,7 @@ cd AirAware
     npm install
     ```
 
-3. Create a `.env` file in the `frontend` directory with the following content:
+3. Create a `.env` file in the `backend` directory with the following content:
 
     ```env
     EMAIL_USER=Notification sender email
@@ -115,6 +115,10 @@ npm start
 
 
 The React application will start at [http://localhost:3000](http://localhost:3000).
+
+### Note
+
+- Currently, our system does not have a login feature, so flight status updates are visible to everyone. Once we implement the login system, only administrators will be able to make changes and view the flight status updates page.
 
 ## Additional Notes
 
