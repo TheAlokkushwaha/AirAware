@@ -1,4 +1,4 @@
-Certainly! Here’s a document outlining the setup steps for someone who has the code and wants to get the project up and running. You can include this in a `README.md` file in your GitHub repository.
+Here's a formatted README file for your project:
 
 ---
 
@@ -6,130 +6,95 @@ Certainly! Here’s a document outlining the setup steps for someone who has the
 
 ## Overview
 
-This project provides a real-time flight status update and notification system. It includes a React.js frontend, a Python Flask backend, and uses MongoDB for data storage and Firebase Cloud Messaging for notifications.
+This project provides a real-time flight status update and notification system. It includes a React.js frontend, a Node.js backend, uses MongoDB for data storage, and Firebase Cloud Messaging for notifications.
 
 ## Prerequisites
 
-- **Node.js**: [Install Node.js](https://nodejs.org/)
-- **Python 3**: [Install Python 3](https://www.python.org/downloads/)
-- **MongoDB**: [Install MongoDB](https://www.mongodb.com/try/download/community)
+- **React** (v16 or later)
+- **Node.js** (v20 or later)
+- **npm** (v6 or later)
+- **MongoDB** (You can use MongoDB Atlas or a local instance)
 - **Firebase Account**: [Create a Firebase account](https://firebase.google.com/)
 
-## Setup Instructions
+## Steps to Setup and Run the Project
 
 ### 1. Clone the Repository
 
-```bash
-git clone https://github.com/your-username/flight-status-notifications.git
-cd flight-status-notifications
+```sh
+git clone https://github.com/TheAlokkushwaha/AirAware
+cd AirAware
 ```
 
 ### 2. Backend Setup
 
-1. **Navigate to the Backend Directory**
+1. Change directory to the backend:
 
-   ```bash
-   cd backend
-   ```
+    ```sh
+    cd backend
+    ```
 
-2. **Create a Virtual Environment (Optional but recommended)**
+2. Install the necessary packages:
 
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-   ```
+    ```sh
+    npm install
+    ```
 
-3. **Install Python Dependencies**
+### 3. Configure Firebase
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+- Obtain your Firebase Server Key from the Firebase Console.
+- Replace `YOUR_SERVER_KEY` in `app.js` with your actual Firebase Server Key.
 
-   Make sure `requirements.txt` contains the following:
+### 4. Start MongoDB
 
-   ```
-   Flask
-   pymongo
-   pyfcm
-   flask-cors
-   ```
+Ensure MongoDB is running on the default port (27017). You can start MongoDB with:
 
-4. **Configure Firebase**
+```sh
+mongod
+```
 
-   - Obtain your Firebase Server Key from the Firebase Console.
-   - Replace `YOUR_SERVER_KEY` in `app.py` with your actual Firebase Server Key.
+### 5. Import Test Data
 
-5. **Start MongoDB**
+Run the following script to insert sample data into MongoDB:
 
-   Ensure MongoDB is running on the default port (27017). You can start MongoDB with:
+```sh
+node importData.js
+```
 
-   ```bash
-   mongod
-   ```
+### 6. Frontend Setup
 
-6. **Run the Flask Server**
+1. Change directory to the frontend:
 
-   ```bash
-   python app.py
-   ```
+    ```sh
+    cd ../frontend
+    ```
 
-   The Flask server will start at `http://localhost:5000`.
+2. Install the necessary packages:
 
-7. **Import Test Data**
+    ```sh
+    npm install
+    ```
 
-   Run the following script to insert sample data into MongoDB:
+### 7. Start the React Development Server
 
-   ```bash
-   python import_data.py
-   ```
+```sh
+npm start
+```
 
-### 3. Frontend Setup
+The React application will start at [http://localhost:3000](http://localhost:3000).
 
-1. **Navigate to the Frontend Directory**
+## Additional Notes
 
-   ```bash
-   cd ../frontend
-   ```
+- Ensure your MongoDB server is running before starting the backend.
+- The frontend will run on the web (usually [http://localhost:3000](http://localhost:3000)), and the backend will run on the server (usually [http://localhost:5000](http://localhost:5000)).
+- Make sure to keep your `.env` file secure and do not share it publicly.
 
-2. **Install Node.js Dependencies**
+## Admin and User Functionality
 
-   ```bash
-   npm install
-   ```
+- **Admin**: Can update the status of the flight.
+- **User**: Can only see the status of the flight. When the status is updated by the admin, the user receives a notification via email.
 
-3. **Start the React Development Server**
-
-   ```bash
-   npm start
-   ```
-
-   The React application will start at `http://localhost:3000`.
-
-### 4. Verify the Setup
-
-1. **Check the Backend**
-
-   Visit `http://localhost:5000/api/flights` to ensure the Flask API is returning flight data.
-
-2. **Check the Frontend**
-
-   Visit `http://localhost:3000` to see the React application displaying flight data.
-
-### Troubleshooting
-
-- **Network Errors**: Ensure that CORS is configured correctly in `app.py` and that the proxy is set up in `frontend/package.json`.
-- **Database Issues**: Ensure MongoDB is running and that the data is correctly inserted.
-- **Firebase Issues**: Verify that the Firebase Server Key is correct and that Firebase Cloud Messaging is properly set up.
-
-### Additional Notes
-
-- Modify the `app.py` file to change the API endpoints or adjust the notification logic as needed.
-- Customize the React frontend by editing components in the `src` directory.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Feel free to adjust the details according to your project specifics and any additional steps you might have.
 
 ---
 
-Feel free to adjust the details according to your project specifics and any additional steps you might have.
+This README provides a clear and structured guide for setting up and running the project, ensuring both clarity and ease of use.
