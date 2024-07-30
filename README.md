@@ -89,6 +89,3 @@ The React application will start at [http://localhost:3000](http://localhost:300
 
 Feel free to adjust the details according to your project specifics and any additional steps you might have.
 
----
-
-This README provides a clear and structured guide for setting up and running the project, ensuring both clarity and ease of use.
