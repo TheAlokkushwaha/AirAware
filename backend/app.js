@@ -5,6 +5,10 @@ const mongoose = require('mongoose');
 const flights = require('./routes/flights');
 const notifications = require('./routes/notifications');
 const cors = require('cors'); 
+const port = process.env.PORT || 5000;
+
+
+
 
 const app = express();
 app.use(cors());
@@ -29,5 +33,7 @@ app.use(bodyParser.json());
 app.use('/api/flights', flights);
 app.use('/api/notifications', notifications);
 
-
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
 module.exports = app;
