@@ -60,21 +60,6 @@ const Footer = () => {
         <hr className="my-6 border-gray-200 md:my-8 h-2" />
 
         <div className="sm:flex sm:items-center sm:justify-between">
-          {/* <div className="flex flex-1 gap-4 hover:cursor-pointer">
-            <img
-              src="https://www.svgrepo.com/show/303139/google-play-badge-logo.svg"
-              width="130"
-              height="110"
-              alt="Google Play"
-            />
-            <img
-              src="https://www.svgrepo.com/show/303128/download-on-the-app-store-apple-logo.svg"
-              width="130"
-              height="110"
-              alt="App Store"
-            />
-          </div> */}
-
           <div className="flex gap-4 hover:cursor-pointer">
             <img
               src="https://www.svgrepo.com/show/303114/facebook-3-logo.svg"

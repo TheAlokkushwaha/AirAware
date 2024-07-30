@@ -1,4 +1,3 @@
-// sms.js
 const twilio = require('twilio');
 
 const client = twilio('TWILIO_ACCOUNT_SID', 'TWILIO_AUTH_TOKEN');

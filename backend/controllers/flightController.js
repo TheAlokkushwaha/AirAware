@@ -110,7 +110,7 @@ exports.updateFlight = async (req, res) => {
         await sendMail(userEmail, emailSubject, emailBody);
 
         // Firebase notification
-        const registrationToken = 'user-firebase-registration-token' // Assuming registration_token is stored in the notification model
+        const registrationToken = 'user-firebase-registration-token'
         const payload = {
           notification: {
             title: 'Flight Information Update',

@@ -6,7 +6,6 @@ const navigation = [
   { name: 'Flight Update', href: '/update', current: false },
   { name: 'Flight Status', href: '/search', current: false },
   { name: 'All Flight', href: '/all_flights', current: false },
-  // { name: 'Calendar', href: '#', current: false },
 ]
 
 function classNames(...classes) {

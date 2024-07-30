@@ -33,7 +33,6 @@ const AllFlights = () => {
             <p className="mb-1"><strong>Arrival Gate:</strong> {flight.arrival_gate}</p>
             <p className="mb-1"><strong>Scheduled Departure:</strong> {new Date(flight.scheduled_departure).toLocaleString()}</p>
             <p className="mb-1"><strong>Scheduled Arrival:</strong> {new Date(flight.scheduled_arrival).toLocaleString()}</p>
-            {/* Add more details if needed */}
           </div>
         ))}
       </div>
