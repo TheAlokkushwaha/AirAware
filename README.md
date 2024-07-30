@@ -89,6 +89,25 @@ node importData.js
 npm start
 ```
 
+### 7. Project UI - Some Images
+
+1. Home Page
+   
+    ![Screenshot 2024-07-30 153118](https://github.com/user-attachments/assets/30928a71-6d37-4c38-a8a3-6053ddcac394)
+
+2. All Flight Page
+   
+    ![Screenshot 2024-07-30 153259](https://github.com/user-attachments/assets/1b983e85-8560-462d-96d3-b897eeb149b8)
+
+3. Flight Status Page
+ 
+    ![Screenshot 2024-07-30 153402](https://github.com/user-attachments/assets/2d031625-fa63-45af-bd88-41ad20e917d4)
+
+4. Flight Edit Page (This is for only Admin)
+
+    ![Screenshot 2024-07-30 153420](https://github.com/user-attachments/assets/d9ca7f15-0f45-455a-9f7c-c8722566d829)
+
+
 The React application will start at [http://localhost:3000](http://localhost:3000).
 
 ## Additional Notes
