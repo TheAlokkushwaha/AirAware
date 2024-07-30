@@ -7,21 +7,17 @@ const notifications = require('./routes/notifications');
 const cors = require('cors'); 
 const port = process.env.PORT || 5000;
 
-
-
-
 const app = express();
-// app.use(cors());
+
 app.use(cors({
-  origin: ['https://air-aware-mel5-66jxf4xzj-thealokkushwahas-projects.vercel.app'],
+  origin: 'https://air-aware-mel5-9d5cxttod-thealokkushwahas-projects.vercel.app', // Update this to match your React app URL exactly
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true
+  allowedHeaders: ['Content-Type'],
+  credentials: true, // Allow credentials
 }));
-// const mongoURL = 'mongodb://localhost:27017/flight_status';
-const mongoURL = process.env.MONGODB_URI; // Use the environment variable
 
+const mongoURL = process.env.MONGODB_URI;
 
-// Connect to MongoDB
 mongoose.connect(mongoURL, { 
   useNewUrlParser: true,
   useUnifiedTopology: true,
