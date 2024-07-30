@@ -35,6 +35,21 @@ cd AirAware
     npm install
     ```
 
+3. Create a `.env` file in the `frontend` directory with the following content:
+
+    ```env
+    EMAIL_USER=Notification sender email
+    EMAIL_PASS=App password
+    ```
+
+4. Create an app password for Gmail:
+
+    - Go to [Google App Passwords](https://myaccount.google.com/apppasswords?rapt=AEjHL4MB7J5gf1Hx6GfMebJ9Za37aEM0RQIHluXAzDfA9ugIaf1ucsbTxiPf87aT--mp3LMlF3tFffnFGC4v6uaYI5lc7YQvzfw2XnuSf5oTUdq4rYTPSOo).
+    - Sign in to your Google account.
+    - Give the project a name.
+    - Copy the generated app password and paste it into the `.env` file as `EMAIL_PASS`.
+
+
 ### 3. Configure Firebase
 
 - Obtain your Firebase Server Key from the Firebase Console.
