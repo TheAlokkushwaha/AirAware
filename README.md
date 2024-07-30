@@ -83,13 +83,21 @@ node importData.js
     npm install
     ```
 
-### 7. Start the React Development Server
+### 7. Run the Backend Server
+
+    Start the backend server with:
+
+    ```sh
+    node server.js
+    ```
+
+### 8. Start the React Development Server
 
 ```sh
 npm start
 ```
 
-### 7. Project UI - Some Images
+### 9. Project UI - Some Images
 
 1. Home Page
    
