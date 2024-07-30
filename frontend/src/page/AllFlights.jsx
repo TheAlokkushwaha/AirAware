@@ -11,7 +11,7 @@ const AllFlights = () => {
   const [flightData, setFlightData] = useState([]);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/flights/`)
+    axios.get(`http://air-aware-r48m82gnl-thealokkushwahas-projects.vercel.app/api/flights/`)
       .then(response => {
         setFlightData(response.data);
         console.log('Flight data fetched successfully:', response.data);
