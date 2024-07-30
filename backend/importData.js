@@ -1,8 +1,10 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 const Flight = require('./models/Flight');
 const Notification = require('./models/Notification');
 
-const mongoURL = 'mongodb://localhost:27017/flight_status';
+// const mongoURL = 'mongodb://localhost:27017/flight_status';
+const mongoURL = process.env.MONGODB_URI; // Use the environment variable
 
 mongoose.connect(mongoURL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
