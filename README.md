@@ -4,6 +4,10 @@
 
 This project provides a real-time flight status update and notification system. It includes a React.js frontend, a Node.js backend, uses MongoDB for data storage, and Firebase Cloud Messaging for notifications.
 
+## Deployed Web App
+
+- You can see the deployed web app by clicking on the link: [AirAware](https://air-aware-mel5.vercel.app/)
+
 ## Prerequisites
 
 - **React** (v16 or later)
