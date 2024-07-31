@@ -6,7 +6,7 @@ const SearchFlight = () => {
   const [flight, setFlight] = useState(null);
 
   const handleSearch = () => {
-    axios.get(`https://air-aware-r48m82gnl-thealokkushwahas-projects.vercel.app/api/flights/${flightId}`)
+    axios.get(`https://air-aware-smoky.vercel.app/api/flights/${flightId}`)
       .then(response => setFlight(response.data))
       .catch(error => console.error('Error fetching flight:', error));
   };
