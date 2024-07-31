@@ -10,19 +10,7 @@ const port = process.env.PORT || 5000;
 const app = express();
 
 // CORS Headers Middleware
-function setCorsHeaders(req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', 'https://air-aware-mel5-41s2s6qg5-thealokkushwahas-projects.vercel.app'); // Replace '*' with your allowed origin in production
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  
-  // Handle preflight requests
-  if (req.method === 'OPTIONS') {
-    return res.sendStatus(204); // No Content
-  }
-  next();
-}
-
-app.use(setCorsHeaders);
+app.use(cors())
 
 app.use(bodyParser.json());
 
