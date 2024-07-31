@@ -116,6 +116,10 @@ npm start
 
 The React application will start at [http://localhost:3000](http://localhost:3000).
 
+## Deployed Web App
+
+- You can see the deployed web app by clicking on the link: [AirAware](https://air-aware-mel5.vercel.app/)
+
 ### Note
 
 - Currently, our system does not have a login feature, so flight status updates are visible to everyone. Once we implement the login system, only administrators will be able to make changes and view the flight status updates page.
@@ -130,6 +134,3 @@ The React application will start at [http://localhost:3000](http://localhost:300
 
 - **Admin**: Can update the status of the flight.
 - **User**: Can only see the status of the flight. When the status is updated by the admin, the user receives a notification via email.
-
-Feel free to adjust the details according to your project specifics and any additional steps you might have.
-
