@@ -10,7 +10,7 @@ const EditFlight = () => {
 
   const handleNext = () => {
     if (flightId) {
-      axios.get(`https://air-aware-r48m82gnl-thealokkushwahas-projects.vercel.app/api/flights/${flightId}`)
+      axios.get(`https://air-aware-smoky.vercel.app/api/flights/${flightId}`)
         .then(response => {
           setFlight(response.data);
           setIsEditing(true);
@@ -40,7 +40,7 @@ const EditFlight = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.put(`https://air-aware-r48m82gnl-thealokkushwahas-projects.vercel.app/api/flights/${flightId}`, flight)
+    axios.put(`https://air-aware-smoky.vercel.app/api/flights/${flightId}`, flight)
       .then(response => {
         console.log('Flight data updated successfully:', response.data);
         handleCancel();
